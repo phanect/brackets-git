@@ -45,7 +45,7 @@
         "load-grunt-tasks": "latest"
     },
 
-    "i18n": ["en", "en-gb", "de", "fr", "it", "pt-br", "zh-cn"],
+    "i18n": ["en"],
     "package-i18n": {
         "de": {
             "description": "Git-Integration für Brackets",
