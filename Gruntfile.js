@@ -137,6 +137,8 @@ module.exports = function (grunt) {
                 dest: "<%= pkg.name %>.zip",
                 src: [
                     "dist/**",
+                    "nls/**",
+                    "styles/**",
                     "LICENSE",
                     "*.js",
                     "*.json",
