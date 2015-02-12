@@ -19,6 +19,19 @@ module.exports = function (grunt) {
                 ignores: ["src/thirdparty/**/*.{js,jsx,es6}"]
             }
         },
+        lineending: {
+            src: {
+                options: {
+                    eol: "lf",
+                    overwrite: true
+                },
+                files: {
+                    "": [
+                        "src/**/*.*"
+                    ]
+                }
+            }
+        },
         wrap: {
             browserpolyfill: {
                 src: "node_modules/6to5/browser-polyfill.js",
@@ -149,7 +162,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask("test", ["jshint"]);
-    grunt.registerTask("prebuild", ["wrap"]);
+    grunt.registerTask("prebuild", ["wrap", "lineending"]);
     grunt.registerTask("build", ["6to5", "string-replace"]);
     grunt.registerTask("package", ["test", "prebuild", "build", "zip"]);
     grunt.registerTask("default", ["prebuild", "build", "watch"]);

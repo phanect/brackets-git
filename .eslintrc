@@ -1,0 +1,6 @@
+settings:
+  ecmascript: 6
+ecmaFeatures:
+  jsx: true
+env:
+  browser: true

@@ -3,12 +3,6 @@
 define(function (require, exports, module) {
     "use strict";
 
-    // register es6 as javascript file extension in Brackets
-    var LanguageManager = brackets.getModule("language/LanguageManager");
-    if (LanguageManager.getLanguageForExtension("es6") == null) {
-        LanguageManager.getLanguageForExtension("js").addFileExtension("es6");
-    }
-    
     var ExtensionUtils = brackets.getModule("utils/ExtensionUtils");
     ExtensionUtils.loadStyleSheet(module, "styles/main.less");
     
