@@ -34,7 +34,7 @@ module.exports = function (grunt) {
         },
         wrap: {
             browserpolyfill: {
-                src: "node_modules/6to5/browser-polyfill.js",
+                src: "node_modules/babel/browser-polyfill.js",
                 dest: "dist/browser-polyfill.js",
                 options: {
                     wrapper: ["(function () { if (window.regeneratorRuntime) { return; }", "}());\n"]
@@ -48,10 +48,11 @@ module.exports = function (grunt) {
                 }
             }
         },
-        "6to5": {
+        "babel": {
             options: {
                 sourceMap: true,
-                modules: "amd"
+                modules: "amd",
+                blacklist: ["regenerator"]
             },
             src: {
                 files: [{
@@ -163,7 +164,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask("test", ["jshint"]);
     grunt.registerTask("prebuild", ["wrap", "lineending"]);
-    grunt.registerTask("build", ["6to5", "string-replace"]);
+    grunt.registerTask("build", ["babel", "string-replace"]);
     grunt.registerTask("package", ["test", "prebuild", "build", "zip"]);
     grunt.registerTask("default", ["prebuild", "build", "watch"]);
 

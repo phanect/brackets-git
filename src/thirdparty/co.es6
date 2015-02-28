@@ -25,9 +25,11 @@ module.exports = co['default'] = co.co = co;
  */
 
 co.wrap = function (fn) {
-  return function () {
+  createPromise.__generatorFunction__ = fn;
+  return createPromise;
+  function createPromise() {
     return co.call(this, fn.apply(this, arguments));
-  };
+  }
 };
 
 /**
@@ -35,7 +37,7 @@ co.wrap = function (fn) {
  * and return a promise.
  *
  * @param {Function} fn
- * @return {Function}
+ * @return {Promise}
  * @api public
  */
 
@@ -214,12 +216,9 @@ function isGenerator(obj) {
  */
 function isGeneratorFunction(obj) {
   var constructor = obj.constructor;
-  var proto = constructor.prototype;
-  var name = constructor.displayName || constructor.name;
-  var nameLooksRight = 'GeneratorFunction' == name;
-  var methodsLooksRight = 'function' == typeof proto.next &&
-                          'function' == typeof proto.throw;
-  return nameLooksRight || methodsLooksRight;
+  if (!constructor) return false;
+  if ('GeneratorFunction' === constructor.name || 'GeneratorFunction' === constructor.displayName) return true;
+  return isGenerator(constructor.prototype);
 }
 
 /**

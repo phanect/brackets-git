@@ -29,13 +29,13 @@
         "test": "grunt test && grunt package"
     },
     "dependencies": {
-        "6to5": "3.5.3",
-        "co": "4.3.1"
+        "babel": "latest",
+        "co": "latest"
     },
     "devDependencies": {
         "glob": "latest",
         "grunt": "latest",
-        "grunt-6to5": "latest",
+        "grunt-babel": "latest",
         "grunt-contrib-copy": "latest",
         "grunt-contrib-jshint": "latest",
         "grunt-contrib-watch": "latest",
