@@ -1,56 +1,66 @@
 {
-    "name": "zaggino.brackets-git",
-
-    "title": "Brackets Git",
-    "description": "Integration of Git into Brackets",
-    "keywords": ["git", "version-control", "source-control"],
-    "version": "1.0.0",
-
-    "license": "MIT",
-    "homepage": "https://github.com/zaggino/brackets-git",
-    "author": {
-        "name": "Martin Zagora",
-        "email": "zaggino@gmail.com",
-        "url": "https://github.com/zaggino"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/zaggino/brackets-git.git"
-    },
-    "bugs": {
-        "url": "https://github.com/zaggino/brackets-git/issues",
-        "email": "zaggino@gmail.com"
-    },
-
-    "engines": {
-        "brackets": ">=1.2.0"
-    },
-    "scripts": {
-        "test": "grunt test && grunt package"
-    },
-    "dependencies": {
-        "babel": "latest",
-        "co": "latest"
-    },
-    "devDependencies": {
-        "glob": "latest",
-        "grunt": "latest",
-        "grunt-babel": "latest",
-        "grunt-contrib-copy": "latest",
-        "grunt-contrib-jshint": "latest",
-        "grunt-contrib-watch": "latest",
-        "grunt-lineending": "latest",
-        "grunt-string-replace": "latest",
-        "grunt-wrap": "latest",
-        "grunt-zip": "latest",
-        "load-grunt-tasks": "latest"
-    },
-
-    "i18n": ["en"],
-    "package-i18n": {
-        "de": {
-            "description": "Git-Integration für Brackets",
-            "keywords": ["git", "version-control", "source-control", "Versionsverwaltung", "Versionskontrollsystem"]
-        }
+  "name": "zaggino.brackets-git",
+  "title": "Brackets Git",
+  "description": "Integration of Git into Brackets",
+  "keywords": [
+    "git",
+    "version-control",
+    "source-control"
+  ],
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/zaggino/brackets-git",
+  "author": {
+    "name": "Martin Zagora",
+    "email": "zaggino@gmail.com",
+    "url": "https://github.com/zaggino"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaggino/brackets-git.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zaggino/brackets-git/issues",
+    "email": "zaggino@gmail.com"
+  },
+  "engines": {
+    "brackets": ">=1.2.0"
+  },
+  "scripts": {
+    "test": "grunt test && grunt package"
+  },
+  "dependencies": {
+    "babel": "latest",
+    "co": "latest"
+  },
+  "devDependencies": {
+    "esprima-fb": "^13001.1.0-dev-harmony-fb",
+    "glob": "latest",
+    "grunt": "latest",
+    "grunt-babel": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-eslint": "^7.0.1",
+    "grunt-lineending": "latest",
+    "grunt-string-replace": "latest",
+    "grunt-wrap": "latest",
+    "grunt-zip": "latest",
+    "load-grunt-tasks": "latest"
+  },
+  "i18n": [
+    "en"
+  ],
+  "package-i18n": {
+    "de": {
+      "description": "Git-Integration für Brackets",
+      "keywords": [
+        "git",
+        "version-control",
+        "source-control",
+        "Versionsverwaltung",
+        "Versionskontrollsystem"
+      ]
     }
+  }
 }

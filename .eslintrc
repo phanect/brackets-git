@@ -1,6 +1,33 @@
-settings:
-  ecmascript: 6
+parser:
+  esprima-fb
 ecmaFeatures:
+  arrowFunctions: true
+  binaryLiterals: true
+  blockBindings: true
+  defaultParams: true
+  forOf: true
+  generators: true
+  objectLiteralComputedProperties: true
+  objectLiteralDuplicateProperties: true
+  objectLiteralShorthandMethods: true
+  objectLiteralShorthandProperties: true
+  octalLiterals: true
+  regexUFlag: true
+  regexYFlag: true
+  superInFunctions: true
+  templateStrings: true
+  unicodeCodePointEscapes: true
+  globalReturn: true
   jsx: true
 env:
   browser: true
+rules:
+  dot-notation: 0
+  global-strict: 0
+  key-spacing: 0  
+  no-multi-spaces: 0
+  quotes: [2, "single"]
+  strict: [2, "never"]
+globals:
+  brackets: false
+  define: false

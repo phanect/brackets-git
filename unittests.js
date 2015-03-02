@@ -1,21 +1,20 @@
 /*global brackets, define, describe, beforeEach, afterEach, runs*/
 
 define(function (require, exports, module) {
-    "use strict";
 
-    var SpecRunnerUtils = brackets.getModule("spec/SpecRunnerUtils"),
-        FileUtils       = brackets.getModule("file/FileUtils");
+    var SpecRunnerUtils = brackets.getModule('spec/SpecRunnerUtils'),
+        FileUtils       = brackets.getModule('file/FileUtils');
 
-    var extensionInfo   = JSON.parse(require("text!package.json")),
+    var extensionInfo   = JSON.parse(require('text!package.json')),
         testSuites = [
             //-build:from
-            require("test/dist/Base-test"),
-            require("test/dist/Logger-test")
+            require('test/dist/Base-test'),
+            require('test/dist/Logger-test')
             //-build:to
         ];
 
     describe(extensionInfo.title, function () {
-        var testFolder = FileUtils.getNativeModuleDirectoryPath(module) + "/test/unittest-files/",
+        var testFolder = FileUtils.getNativeModuleDirectoryPath(module) + '/test/unittest-files/',
             testWindow;
 
         beforeEach(function () {
